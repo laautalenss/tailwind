@@ -1,19 +1,344 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS v3</title>
-    <link href="output.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-    <div class="container mx-auto p-8">
-        <h1 class="text-4xl font-bold text-blue-600">
-            ¡Hola Tailwind CSS v3!
-        </h1>
-        <p class="mt-4 text-gray-700">
-            Funcionando correctamente con el método tradicional.
-        </p>
-    </div>
-</body>
+<!doctype html>
+<html lang="es" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Top películas imprescindibles - Landing ultra-minimalista"
+        />
+        <title>CinéTop · Películas Esenciales</title>
+        <link href="output.css" rel="stylesheet" />
+    </head>
+    <body class="dark:bg-gray-950 bg-white text-gray-100 font-sans antialiased">
+        <!-- Header -->
+        <header class="border-b border-gray-800 py-6">
+            <nav
+                class="max-w-4xl mx-auto px-6 flex justify-between items-center"
+            >
+                <h1 class="text-xl font-semibold tracking-tight">
+                    <svg
+                        class="inline-block w-5 h-5 mr-2"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <rect
+                            x="2"
+                            y="2"
+                            width="20"
+                            height="20"
+                            rx="2.18"
+                            ry="2.18"
+                        />
+                        <line x1="7" y1="2" x2="7" y2="22" />
+                        <line x1="17" y1="2" x2="17" y2="22" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <line x1="2" y1="7" x2="7" y2="7" />
+                        <line x1="2" y1="17" x2="7" y2="17" />
+                        <line x1="17" y1="17" x2="22" y2="17" />
+                        <line x1="17" y1="7" x2="22" y2="7" />
+                    </svg>
+                    CinéTop
+                </h1>
+                <button
+                    id="counter-btn"
+                    class="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-md text-sm transition-colors duration-200"
+                    aria-label="Contador de películas vistas"
+                >
+                    Vistas: <span id="counter">0</span>
+                </button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-6 py-16">
+            <!-- Hero Section -->
+            <section class="mb-20">
+                <h2
+                    class="text-5xl md:text-6xl font-bold tracking-tighter leading-tight mb-6"
+                >
+                    Las Mejores.<br />
+                    Películas de Todos<br />
+                    los Tiempos.
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl leading-relaxed">
+                    Una selección curada de obras maestras del cine que debes
+                    ver antes de morir.
+                    <strong class="text-gray-200">Cine esencial</strong>, sin
+                    distracciones.
+                </p>
+            </section>
+
+            <!-- Top Movies List -->
+            <section class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 flex items-center">
+                    <svg
+                        class="w-6 h-6 mr-2"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path
+                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                        />
+                    </svg>
+                    Top 10 Imprescindibles
+                </h3>
+
+                <ol class="space-y-4">
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >1</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                El Padrino
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Francis Ford Coppola · 1972
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                La saga definitiva sobre poder, familia y
+                                traición.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >2</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                Cadena Perpetua
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Frank Darabont · 1994
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Esperanza y redención tras los muros de
+                                Shawshank.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >3</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                El Caballero Oscuro
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Christopher Nolan · 2008
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Batman enfrenta al caos personificado en el
+                                Joker.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >4</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                Pulp Fiction
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Quentin Tarantino · 1994
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Narrativa no lineal que revolucionó el cine
+                                moderno.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >5</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                La Lista de Schindler
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Steven Spielberg · 1993
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Un testimonio conmovedor del Holocausto.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >6</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">Origen</h4>
+                            <p class="text-sm text-gray-400">
+                                Christopher Nolan · 2010
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Arquitectura de sueños en múltiples capas de
+                                realidad.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >7</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                Forrest Gump
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Robert Zemeckis · 1994
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                La extraordinaria vida de un hombre ordinario.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >8</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                El Señor de los Anillos: El Retorno del Rey
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Peter Jackson · 2003
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                La épica conclusión de la trilogía fantástica
+                                definitiva.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >9</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">Matrix</h4>
+                            <p class="text-sm text-gray-400">
+                                Hermanas Wachowski · 1999
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                ¿Qué es real? Filosofía y acción revolucionaria.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li
+                        class="border border-gray-800 p-4 rounded-lg hover:border-gray-700 transition-colors flex items-start"
+                    >
+                        <span class="text-3xl font-bold text-gray-700 mr-4 mt-1"
+                            >10</span
+                        >
+                        <div class="flex-1">
+                            <h4 class="text-lg font-semibold mb-1">
+                                El Club de la Pelea
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                David Fincher · 1999
+                            </p>
+                            <p class="text-sm text-gray-500 mt-2">
+                                Una crítica feroz al consumismo y la
+                                masculinidad.
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Stats Section -->
+            <section
+                class="bg-gray-900 border border-gray-800 rounded-lg p-8 mb-20"
+            >
+                <h3 class="text-2xl font-bold mb-6">Por qué esta Selección</h3>
+                <dl class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <dt class="text-gray-400 text-sm mb-1">Criterio</dt>
+                        <dd class="text-lg font-semibold">Impacto Cultural</dd>
+                        <p class="text-xs text-gray-500 mt-1">
+                            Películas que cambiaron el cine
+                        </p>
+                    </div>
+                    <div>
+                        <dt class="text-gray-400 text-sm mb-1">Décadas</dt>
+                        <dd class="text-lg font-semibold">1970-2010</dd>
+                        <p class="text-xs text-gray-500 mt-1">
+                            40 años de obras maestras
+                        </p>
+                    </div>
+                    <div>
+                        <dt class="text-gray-400 text-sm mb-1">Géneros</dt>
+                        <dd class="text-lg font-semibold">Multiples</dd>
+                        <p class="text-xs text-gray-500 mt-1">
+                            Drama, Acción, Sci-Fi, Fantasía
+                        </p>
+                    </div>
+                </dl>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="text-center">
+                <h3 class="text-3xl font-bold mb-4">
+                    Expande tu Cultura Cinematográfica
+                </h3>
+                <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Cada película es una ventana a nuevos mundos. Cada historia
+                    cuenta.
+                </p>
+                <a
+                    href="#"
+                    class="inline-block px-8 py-3 bg-white text-gray-950 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+                >
+                    Ver Más Tops
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="border-t border-gray-800 py-8 mt-20">
+            <div
+                class="max-w-4xl mx-auto px-6 text-center text-gray-500 text-sm"
+            >
+                <p>Selección curada para cinéfilos · 2026</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
