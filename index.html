@@ -5,164 +5,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contacta con nosotros de forma sencilla y rápida"
+      content="Las mejores películas y formulario de contacto"
     />
-    <title>Formulario de Contacto | Conecta con Nosotros</title>
+    <title>Top Películas | Contacto</title>
     <link href="output.css" rel="stylesheet" />
   </head>
-  <body
-    class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen font-sans"
-  >
-    <!-- Contenedor Principal -->
-    <div class="container mx-auto px-4 py-8 md:py-12">
-      <!-- Encabezado -->
-      <header class="text-center mb-8 md:mb-12">
-        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-          Consultas
-        </h1>
-        <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-          Completa el formulario para ponerte en contacto con nosotros y ver tu
-          consulta
-        </p>
-      </header>
+  <body class="bg-gray-900 min-h-screen font-sans">
+    <!-- Sección de Películas -->
+    <section class="bg-gray-950 py-12 border-b border-gray-800">
+      <div class="max-w-4xl mx-auto px-6">
+        <!-- Encabezado de películas -->
+        <header class="mb-10">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
+            Top 5 Películas Imprescindibles
+          </h1>
+          <p class="text-lg text-gray-400">
+            Una selección de obras maestras del cine que debes ver antes de
+            morir.
+          </p>
+        </header>
 
-      <!-- Tarjeta del Formulario -->
-      <main class="max-w-2xl mx-auto">
-        <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-          <!-- Formulario -->
-          <form id="contactForm" novalidate>
-            <!-- Campo Nombre -->
-            <div class="mb-5">
-              <label
-                for="name"
-                class="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Nombre completo
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none"
-                placeholder="Escribe tu nombre"
-                aria-describedby="nameError"
-              />
-              <p
-                id="nameError"
-                class="text-red-600 text-sm mt-1 hidden"
-                role="alert"
-              ></p>
-            </div>
-
-            <!-- Campo Email -->
-            <div class="mb-5">
-              <label
-                for="email"
-                class="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Correo electrónico
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none"
-                placeholder="tu@email.com"
-                aria-describedby="emailError"
-              />
-              <p
-                id="emailError"
-                class="text-red-600 text-sm mt-1 hidden"
-                role="alert"
-              ></p>
-            </div>
-
-            <!-- Campo Teléfono -->
-            <div class="mb-5">
-              <label
-                for="phone"
-                class="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Teléfono <span class="text-gray-400 text-xs">(opcional)</span>
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none"
-                placeholder="600 123 456"
-                aria-describedby="phoneError"
-              />
-              <p
-                id="phoneError"
-                class="text-red-600 text-sm mt-1 hidden"
-                role="alert"
-              ></p>
-            </div>
-
-            <!-- Campo Mensaje -->
-            <div class="mb-6">
-              <label
-                for="message"
-                class="block text-sm font-medium text-gray-700 mb-2"
-              >
-                Mensaje
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none resize-none"
-                placeholder="Cuéntanos qué necesitas..."
-                aria-describedby="messageError"
-              ></textarea>
-              <p
-                id="messageError"
-                class="text-red-600 text-sm mt-1 hidden"
-                role="alert"
-              ></p>
-            </div>
-
-            <!-- Botón de Envío -->
-            <button
-              type="submit"
-              id="submitBtn"
-              class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:ring-4 focus:ring-indigo-300 outline-none"
-            >
-              Enviar mensaje
-            </button>
-
-            <!-- Mensaje de Éxito -->
-            <div
-              id="successMessage"
-              class="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg hidden"
-            >
-              <p class="text-green-700 text-center font-medium">
-                ¡Mensaje enviado con éxito! Te contactaremos pronto.
+        <!-- Lista de películas -->
+        <ol class="space-y-4">
+          <li
+            class="border border-gray-700 p-5 rounded-lg hover:border-gray-600 transition-colors flex items-start bg-gray-800"
+          >
+            <img
+              src="imgs/elpadrino.webp"
+              alt="El Padrino"
+              class="w-24 h-36 object-cover rounded-md mr-4"
+              loading="lazy"
+            />
+            <span class="text-3xl font-bold text-gray-600 mr-4 mt-1">1</span>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-gray-100 mb-1">
+                El Padrino
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">
+                Francis Ford Coppola · 1972
+              </p>
+              <p class="text-sm text-gray-300">
+                La saga definitiva sobre poder, familia y traición en la mafia
+                italiana.
               </p>
             </div>
-          </form>
-        </div>
+          </li>
 
-        <!-- Información Adicional -->
-        <div class="mt-8 text-center text-sm text-gray-600">
-          <p>También puedes contactarnos directamente en:</p>
-          <p class="mt-2">
-            <a
-              href="mailto:contacto@contacto.com"
-              class="text-indigo-600 hover:underline"
-            >
-              contacto@contacto.com
-            </a>
+          <li
+            class="border border-gray-700 p-5 rounded-lg hover:border-gray-600 transition-colors flex items-start bg-gray-800"
+          >
+            <img
+              src="imgs/cadenaperpetua.webp"
+              alt="Cadena Perpetua"
+              class="w-24 h-36 object-cover rounded-md mr-4"
+              loading="lazy"
+            />
+            <span class="text-3xl font-bold text-gray-600 mr-4 mt-1">2</span>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-gray-100 mb-1">
+                Cadena Perpetua
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">Frank Darabont · 1994</p>
+              <p class="text-sm text-gray-300">
+                Esperanza y redención tras los muros de la prisión de Shawshank.
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="border border-gray-700 p-5 rounded-lg hover:border-gray-600 transition-colors flex items-start bg-gray-800"
+          >
+            <img
+              src="imgs/elcaballerooscuro.webp"
+              alt="El Caballero Oscuro"
+              class="w-24 h-36 object-cover rounded-md mr-4"
+              loading="lazy"
+            />
+            <span class="text-3xl font-bold text-gray-600 mr-4 mt-1">3</span>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-gray-100 mb-1">
+                El Caballero Oscuro
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">Christopher Nolan · 2008</p>
+              <p class="text-sm text-gray-300">
+                Batman enfrenta al caos personificado en el Joker de Heath
+                Ledger.
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="border border-gray-700 p-5 rounded-lg hover:border-gray-600 transition-colors flex items-start bg-gray-800"
+          >
+            <img
+              src="imgs/pulpfiction.webp"
+              alt="Pulp Fiction"
+              class="w-24 h-36 object-cover rounded-md mr-4"
+              loading="lazy"
+            />
+            <span class="text-3xl font-bold text-gray-600 mr-4 mt-1">4</span>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-gray-100 mb-1">
+                Pulp Fiction
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">Quentin Tarantino · 1994</p>
+              <p class="text-sm text-gray-300">
+                Historias entrelazadas de crimen que revolucionaron el cine
+                moderno.
+              </p>
+            </div>
+          </li>
+
+          <li
+            class="border border-gray-700 p-5 rounded-lg hover:border-gray-600 transition-colors flex items-start bg-gray-800"
+          >
+            <img
+              src="imgs/lalistadeschindler.webp"
+              alt="La Lista de Schindler"
+              class="w-24 h-36 object-cover rounded-md mr-4"
+              loading="lazy"
+            />
+            <span class="text-3xl font-bold text-gray-600 mr-4 mt-1">5</span>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-gray-100 mb-1">
+                La Lista de Schindler
+              </h3>
+              <p class="text-sm text-gray-400 mb-2">Steven Spielberg · 1993</p>
+              <p class="text-sm text-gray-300">
+                Un testimonio conmovedor del Holocausto y la humanidad en
+                tiempos oscuros.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="bg-gradient-to-br from-gray-800 to-gray-900 py-12">
+      <div class="container mx-auto px-4 py-8">
+        <!-- Encabezado del formulario -->
+        <header class="text-center mb-8 md:mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-3">
+            ¿Tienes alguna consulta?
+          </h2>
+          <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+            Completa el formulario y te responderemos lo antes posible.
           </p>
-        </div>
-      </main>
+        </header>
 
-      <!-- Pie de Página -->
-      <footer class="mt-12 text-center text-xs text-gray-500">
-        <p>&copy; 2026 - Sostenibilidad</p>
-      </footer>
-    </div>
+        <!-- Tarjeta del Formulario -->
+        <main class="max-w-2xl mx-auto">
+          <div class="bg-gray-800 rounded-lg shadow-lg p-6 md:p-8">
+            <!-- Formulario -->
+            <form id="contactForm" novalidate>
+              <!-- Campo Nombre -->
+              <div class="mb-5">
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                >
+                  Nombre completo
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none"
+                  placeholder="Escribe tu nombre"
+                  aria-describedby="nameError"
+                />
+                <p
+                  id="nameError"
+                  class="text-red-600 text-sm mt-1 hidden"
+                  role="alert"
+                ></p>
+              </div>
+
+              <!-- Campo Email -->
+              <div class="mb-5">
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                >
+                  Correo electrónico
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none"
+                  placeholder="tu@email.com"
+                  aria-describedby="emailError"
+                />
+                <p
+                  id="emailError"
+                  class="text-red-600 text-sm mt-1 hidden"
+                  role="alert"
+                ></p>
+              </div>
+
+              <!-- Campo Teléfono -->
+              <div class="mb-5">
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                >
+                  Teléfono <span class="text-gray-500 text-xs">(opcional)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none"
+                  placeholder="600 123 456"
+                  aria-describedby="phoneError"
+                />
+                <p
+                  id="phoneError"
+                  class="text-red-600 text-sm mt-1 hidden"
+                  role="alert"
+                ></p>
+              </div>
+
+              <!-- Campo Mensaje -->
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                >
+                  Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-3 bg-gray-700 border border-gray-600 text-gray-100 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all outline-none resize-none"
+                  placeholder="Cuéntanos qué necesitas..."
+                  aria-describedby="messageError"
+                ></textarea>
+                <p
+                  id="messageError"
+                  class="text-red-600 text-sm mt-1 hidden"
+                  role="alert"
+                ></p>
+              </div>
+
+              <!-- Botón de Envío -->
+              <button
+                type="submit"
+                id="submitBtn"
+                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:ring-4 focus:ring-indigo-300 outline-none"
+              >
+                Enviar mensaje
+              </button>
+
+              <!-- Mensaje de Éxito -->
+              <div
+                id="successMessage"
+                class="mt-6 p-4 bg-green-900 border border-green-700 rounded-lg hidden"
+              >
+                <p class="text-green-300 text-center font-medium">
+                  ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Información Adicional -->
+          <div class="mt-8 text-center text-sm text-gray-400">
+            <p>También puedes contactarnos directamente en:</p>
+            <p class="mt-2">
+              <a
+                href="mailto:contacto@ejemplo.com"
+                class="text-indigo-400 hover:underline"
+              >
+                contacto@ejemplo.com
+              </a>
+            </p>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-black text-gray-400 py-6 text-center text-sm">
+      <p>&copy; 2026 - Top pelicuñas</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
