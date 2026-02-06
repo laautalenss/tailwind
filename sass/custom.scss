@@ -1,0 +1,40 @@
+/*Modificamos la tipografía, definida en _variables.scss = font-family-sans-serif*/
+$font-family-sans-serif: "Barlow Semi Condensed", sans-serif;
+
+/*Modificamos los colores de fondo de las tarjetas, definida en _variables.scss*/
+$primary: #733fc8;
+$secondary: #49556b;
+$success: #18202d;
+$dark: #edf2f8;
+
+/*Modificamos los anchos del container para que a partir del lg, esto es en medidas lg y superiores, su ancho sea de 960px. definida en _variables.scss*/
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 960px,
+	xxl: 960px,
+);
+
+/*https://getbootstrap.com/docs/5.0/layout/breakpoints/#min-width*/
+/*Traemos el estilo en CSS definido en un primer momento en el archivo .html*/
+@media (min-width: 992px) {
+	.alto-100 {
+		height: 100vh;
+	}
+}
+
+/*Modificamos el tamaño de las imágenes para que sea más pequeño*/
+.d-flex img {
+	width: 50px;
+}
+
+/*Modificamos el fondo de la primera card para que aparezcan las comillas dobles. Debemos añadir las dos últimas restricciones para que no quede grandísimo*/
+.fondo-card {
+	background-image: url(../images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position: 85% top;
+}
+
+/*Llamada a lo que instalamos con npm: para importar Bootstrap Sass que viene de node_modules. IMPORTANTE!! Con esto NO tenemos Bootstrap solamente lo estamos llamando en los archivos Sass*/
+@import "../node_modules/bootstrap/scss/bootstrap";
